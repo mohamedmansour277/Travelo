@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#399DFF">
+  <link rel="icon" type="img" href="../mm/imgs/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travelo</title>
+  <link rel="stylesheet" href="style (1).css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="navContainer">
+      <div class="logo">
+        <img src="../mm/imgs/Logo.png" alt="Logo" />
+      </div>
+      <nav class="navLinks" id="navLinks">
+        <a class="homeNav" href="../index.html">Home</a>
+        <a class="aboutNav" href="../amal/about22.html" target="_self">About</a>
+        <a class="destinationNav" href="../aya2/Distenation.html">Destination</a>
+        <a class="bookNav" href="../book.html">Book</a>
+        <div class="darkMode" id="darkToggle">
+          <div class="circleClick"></div>
+        </div>
+        <a class="loginNav" href="../mh/index.html" target="_self">Login</a>
+      </nav>
+      <div class="menuToggle" id="openMenu">
+        <img src="../mm/imgs/svg/openIcon.svg" alt="Open Menu" />
+      </div>
+      <div class="menuToggle" id="closeMenu" style="display: none;">
+        <img src="../mm/imgs/svg/laptop-svgrepo-com.svg" alt="Close Menu" />
+      </div>
+    </div>
+  </header>
+  <!-- ---------------SLIDER--------------- -->
+  <div class="slider">
+    <div class="slides">
+      <div class="slide active">
+        <img src="images/group-friends-taking-selfie-cellphone.jpg" alt="tourist">
+      </div>
+      <div class="slide">
+        <img src="images/rear-view-happy-hiking-family-embracing.jpg" alt="tourist">
+      </div>
+      <div class="slide">
+        <img src="images/happy-hipster-company-friends-traveling-around-world.jpg" alt="tourist">
+      </div>
+      <div class="slide">
+        <img src="images/couple-tourists-searching-some-entertainments.jpg" alt="Ocean sunset">
+      </div>
+      <div class="slide">
+        <img src="images/woman-making-peace-sign-with-her-boyfriend-taking-selfie-mobile.jpg" alt="tourist">
+      </div>
+      <div class="slide">
+        <img src="images/female-tourists-hand-have-happy-travel-map.jpg" alt="tourist">
+      </div>
+    </div>
+
+    <p class="btn prev" onclick="prevSlide()">
+      <span>‹</span>
+    </p>
+
+    <p class="btn next" onclick="nextSlide()">
+      <span>›</span>
+    </p>
+
+    <div class="dots">
+      <button class="dot active" onclick="goToSlide(0)"></button>
+      <button class="dot" onclick="goToSlide(1)"></button>
+      <button class="dot" onclick="goToSlide(2)"></button>
+      <button class="dot" onclick="goToSlide(3)"></button>
+      <button class="dot" onclick="goToSlide(4)"></button>
+      <button class="dot" onclick="goToSlide(5)"></button>
+    </div>
+  </div>
+
+  <!-- ---------------OUR STORY---------------->
+  <section class="whyChoose">
+    <div class="container">
+      <div class="sectionHeader">
+        <h2 class="sectionTitle">Why Choose Travelo?</h2>
+        <p class="sectionSubtitle">
+          We're not just another travel agency. We're your trusted partner in creating unforgettable journeys and
+          memories that last a lifetime.
+        </p>
+      </div>
+
+      <div class="featureGrid">
+        <div class="featureCard">
+          <div class="featureIcon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+              <path
+                d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
+            </svg>
+          </div>
+          <h3 class="featureTitle">Expert Planning</h3>
+          <p class="featureInfo">
+            Our experienced travel consultants craft personalized itineraries based on your preferences, budget, and
+            travel style.
+          </p>
+        </div>
+
+        <div class="featureCard">
+          <div class="featureIcon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+              <path
+                d="M7 4V2C7 1.45 7.45 1 8 1S9 1.45 9 2V4H15V2C15 1.45 15.45 1 16 1S17 1.45 17 2V4H18C19.1 4 20 4.9 20 6V20C20 21.1 19.1 22 18 22H6C4.9 22 4 21.1 4 20V6C4 4.9 4.9 4 6 4H7ZM6 8V20H18V8H6ZM12 13L16.5 17.5L15.08 18.92L12 15.84L8.92 18.92L7.5 17.5L12 13Z" />
+            </svg>
+          </div>
+          <h3 class="featureTitle">Best Price Guarantee</h3>
+          <p class="featureInfo">
+            We guarantee the best prices for your trips. If you find a better deal elsewhere, we'll match it and give
+            you an extra discount.
+          </p>
+        </div>
+
+        <div class="featureCard">
+          <div class="featureIcon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+            </svg>
+          </div>
+          <h3 class="featureTitle">Global Network</h3>
+          <p class="featureInfo">
+            With partners in over 150 countries, we provide seamless travel experiences and local support wherever you
+            go.
+          </p>
+        </div>
+
+        <div class="featureCard">
+          <div class="featureIcon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+              <path
+                d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7C14.5 7 14.1 7.2 13.9 7.5L13 9.5L11.5 7.5C11.3 7.2 10.9 7 10.5 7H6V9H10L12 13V22H14V13L15 11L16 13H18C19.1 13 20 12.1 20 11V9H21Z" />
+            </svg>
+          </div>
+          <h3 class="featureTitle">24/7 Support</h3>
+          <p class="featureInfo">
+            Our dedicated support team is available round the clock to assist you before, during, and after your trip.
+          </p>
+        </div>
+
+        <div class="featureCard">
+          <div class="featureIcon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+              <path
+                d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z" />
+            </svg>
+          </div>
+          <h3 class="featureTitle">Travel Insurance</h3>
+          <p class="featureInfo">
+            Comprehensive travel insurance coverage ensures your peace of mind and protects your investment in every
+            journey.
+          </p>
+        </div>
+
+        <div class="featureCard">
+          <div class="featureIcon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+          <h3 class="featureTitle">Exclusive Experiences</h3>
+          <p class="featureInfo">
+            Access to exclusive tours, hidden gems, and VIP experiences that you won't find anywhere else.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /* *****************journey********************** */  -->
+  <div class="counter">
+    <div class="journey journey1">
+      <h4>+0</h4>
+      <p>Adventures Completed Worldwide</p>
+    </div>
+    <div class="journey journey2">
+      <h4>+0</h4>
+      <p>Miles Traveled This Year</p>
+    </div>
+    <div class="journey journey3">
+      <h4>+0</h4>
+      <p>Countries Explored Together</p>
+    </div>
+  </div>
+  <!-- /* *****************email********************** */ -->
+  <div class="email">
+    <h1>Don't Miss An Adventure...</h1>
+    <p>Get insider access to flash sales, destination guides, and travel inspiration</p>
+    <form onsubmit="event.preventDefault(); toggleEmail();">
+      <div class="inputContainer">
+        <input type="email" placeholder="Your E-mail Address..." pattern="[a-zA-Z0-9]{5,20}@(gmail|yahoo)\.com"
+          name="email" id="emailInput" required />
+        <i class="fa fa-envelope toggleEmail" id="toggleIcon" onclick="toggleEmail()"></i>
+        <span id="statusText" style="display: none; margin-left: 1rem; color: #555;"></span>
+      </div>
+    </form>
+  </div>
+  <!-- ----------MISSION & VALUES------------ -->
+  <div class="missionAndValue">
+    <div class="mission">
+      <h1>Our Mission</h1>
+      <p>We don't just plan trips—we craft life-changing adventures that awaken your soul. Every journey with Travelo is
+        a portal to extraordinary moments, where strangers become friends, boundaries dissolve, and the impossible
+        becomes your reality. We're here to turn your wildest travel dreams into unforgettable stories.</p>
+      <div class="inspired">
+        <p>
+          "Adventure is not outside man; it is within. The real voyage of discovery consists not in seeking new
+          landscapes, but in having new eyes—and we're here to help you see the world with wonder again."</p>
+        <p class="marcel">Inspired by Marcel Proust</p>
+      </div>
+    </div>
+    <div class="value">
+      <h1>Travelo's Core Values</h1>
+      <div class="valueItem">
+        <div class="valueIcon">
+          <svg width="24" height="24" fill="#020934" viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+          </svg>
+        </div>
+        <div class="valueContent">
+          <h3>Chase the Extraordinary</h3>
+          <p>We believe ordinary is overrated. Every experience we curate pushes boundaries and creates those "pinch-me"
+            moments that make life legendary</p>
+        </div>
+      </div>
+      <div class="valueItem">
+        <div class="valueIcon">
+          <svg width="24" height="24" fill="#020934" viewBox="0 0 24 24">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+        </div>
+        <div class="valueContent">
+          <h3>Dream Big, Travel Bigger</h3>
+          <p>From AI-powered wanderlust to virtual reality previews—we're revolutionizing how you discover and
+            experience the world</p>
+        </div>
+      </div>
+
+      <div class="valueItem">
+        <div class="valueIcon">
+          <svg width="24" height="24" fill="#020934" viewBox="0 0 24 24">
+            <path
+              d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-1 16H9V7h9v14z" />
+          </svg>
+        </div>
+        <div class="valueContent">
+          <h3>Unlock Secret Worlds</h3>
+          <p>Skip the tourist traps. We're your key to underground speakeasies, rooftop sunrises, and midnight markets
+            that only locals whisper about</p>
+        </div>
+      </div>
+      <div class="valueItem">
+        <div class="valueIcon">
+          <svg width="24" height="24" fill="#020934" viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+          </svg>
+        </div>
+        <div class="valueContent">
+          <h3>Collect People, Not Things</h3>
+          <p>Every journey connects you with incredible humans who'll change your perspective forever—because the best
+            souvenirs are the friendships you make</p>
+        </div>
+      </div>
+      <div class="valueItem">
+        <div class="valueIcon">
+          <svg width="24" height="24" fill="#020934" viewBox="0 0 24 24">
+            <path
+              d="M17 8C8 10 5.9 16.17 3.82 21.34l1.06.82C6.16 17.74 9 14.76 17 8zm3.5-2L18 4l-1.5 2L15 4l-1.5 2L12 4l-1.5 2L9 4L7.5 6L6 4L4.5 6L3 4v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4l-1.5 2z" />
+          </svg>
+        </div>
+        <div class="valueContent">
+          <h3>Leave Magic, Take Memories</h3>
+          <p>Travel with purpose that heals the planet. Every adventure gives back, protects paradise, and ensures
+            future generations can chase their own dreams</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -------------AIRLINE & PARTNERS-------- -->
+  <div class="airlineAndPartner">
+    <div class="WithUs">
+      <P class="airlineHead">The Airline in The World </P>
+      <p class="airlineInfo">Book Cheap Flights On Your Favourite airlines in Egypt</p>
+    </div>
+    <div class="airlineImages">
+      <div class="airline"><img src="images/Delta-Airlines-Logo.png"></div>
+      <div class="airline"><img src="images/Gulf-Air-Logo.png"></div>
+      <div class="airline"><img src="images/SriLankan-Airlines-Logo.png"></div>
+      <div class="airline"><img src="images/Hawaiian-Airlines-Logo.png"></div>
+      <div class="airline"><img src="images/KLM-Airlines-Logo.png"></div>
+      <div class="airline"><img src="images/Qantas-Airline-Logo.png"></div>
+      <div class="airline"><img src="images/7.png"></div>
+      <div class="airline"><img src="images/8.jpg"></div>
+    </div>
+  </div>
+  <div class="airlineAndPartner">
+    <div class="WithUs">
+      <P class="airlineHead">Our Travel Partner</P>
+      <p class="airlineInfo partnerInfo">Travelo Searches for best Deals on These Sites in The World</p>
+    </div>
+    <div class="airlineImages">
+      <div class="airline "><img src="images/p44.png"></div>
+      <div class="airline"><img src="images/p22.jpg"></div>
+      <div class="airline"><img src="images/p33.png"></div>
+      <div class="airline"><img src="images/p44.png"></div>
+      <div class="airline"><img src="images/p44.png"></div>
+      <div class="airline"><img src="images/p22.jpg"></div>
+      <div class="airline"><img src="images/p33.png"></div>
+      <div class="airline"><img src="images/p44.png"></div>
+    </div>
+  </div>
+  <!-- ------------------OFFICES--------------- -->
+  <div class="globalOffices">
+    <div class="officesHeader">
+      <h2 class="officesTitle">Travelo Offices</h2>
+    </div>
+    <div class="officesGrid">
+      <div class="officeCard">
+        <img src="images/Flag_of_Singapore.svg.png" class="officeFlag">
+        <h3 class="officeCity">Travelo Singapore</h3>
+        <div class="officeAddress">
+          1 Harbourfront Place, #18-04<br>
+          HarbourFront Tower One<br>
+          Singapore 098633
+        </div>
+        <div class="officeContact">
+          <div class="contactItem">+65 6692 0868</div>
+        </div>
+      </div>
+
+      <div class="officeCard">
+        <img src="images/Flag_of_the_United_Arab_Emirates.svg.png" class="officeFlag">
+        <h3 class="officeCity">Travelo UAE</h3>
+        <div class="officeAddress">
+          DIC 2 Office 201-202, Dubai, UAE<br>
+          PO BOX 500064,<br>
+          United Arab Emirates
+        </div>
+        <div class="officeContact">
+          <div class="contactItem">+97145810300</div>
+        </div>
+      </div>
+      <div class="officeCard">
+        <img src="images/Flag_of_Egypt.svg.png" class="officeFlag">
+        <h3 class="officeCity">Travelo Egypt</h3>
+        <div class="officeAddress">
+          Capital A2, 3rd Floor<br>
+          City Stars Complex<br>
+          Heliopolis, Cairo
+        </div>
+        <div class="officeContact">
+          <div class="contactItem">+20 21279930</div>
+        </div>
+      </div>
+
+      <div class="officeCard">
+        <img src="images/Indonesia_flag_300.png" class="officeFlag">
+        <h3 class="officeCity">Travelo Indonesia</h3>
+        <div class="officeAddress">
+          CoHive - Cyber 2 Tower, 28th floor<br>
+          Jl. HR Rasuna Said, Jakarta<br>
+          Indonesia 12950
+        </div>
+        <div class="officeContact">
+          <div class="contactItem">+62 21 5088 9999</div>
+        </div>
+      </div>
+      <div class="officeCard">
+        <img src="images/flag-of-india.png" class="officeFlag">
+        <h3 class="officeCity">Travelo India</h3>
+        <div class="officeAddress">
+          TRAVELO SEARCH TECHNOLOGIES<br>
+          Brigade Gateway, Level 26<br>
+          Bengaluru, Karnataka 560076
+        </div>
+        <div class="officeContact">
+          <div class="contactItem">+91 80 4040 9999</div>
+        </div>
+      </div>
+
+      <div class="officeCard">
+        <img src="images/Flag_of_Malaysia.svg.png" class="officeFlag">
+        <h3 class="officeCity">Travelo Malaysia</h3>
+        <div class="officeAddress">
+          B03A-12-01 Level 12, Menara<br>
+          3 Petronas, KLCC<br>
+          Kuala Lumpur 50088
+        </div>
+        <div class="officeContact">
+          <div class="contactItem">+60 3 2382 9999</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -------------OFFICES SLIDER---------- -->
+  <div class="slider2">
+    <div class="slides2">
+      <div class="slide2 active2">
+        <img src="images/3d-rendering-business-meeting-working-room-office-building (1).jpg" alt="tourist">
+      </div>
+      <div class="slide2">
+        <img src="images/3d-rendering-business-meeting-working-room-office-building.jpg" alt="tourist">
+      </div>
+      <div class="slide2">
+        <img src="images/dale-underwriting-image-12.jpg" alt="tourist">
+      </div>
+      <div class="slide2">
+        <img src="images/modern-office-interior-reduced.png" alt="Ocean sunset">
+      </div>
+      <div class="slide2">
+        <img src="images/WT-banner.png" alt="tourist">
+      </div>
+      <div class="slide2">
+        <img src="images/modern-Office-Design-The-Ultimate-Guide-to-Office-Design-in-2022-1.png" alt="tourist">
+      </div>
+    </div>
+
+    <p class="btn2 prev2" onclick="prevSlide2()">
+      <span>‹</span>
+    </p>
+
+    <p class="btn2 next2" onclick="nextSlide2()">
+      <span>›</span>
+    </p>
+
+    <div class="dots2">
+      <button class="dot2 active2" onclick="goToSlide2(0)"></button>
+      <button class="dot2" onclick="goToSlide2(1)"></button>
+      <button class="dot2" onclick="goToSlide2(2)"></button>
+      <button class="dot2" onclick="goToSlide2(3)"></button>
+      <button class="dot2" onclick="goToSlide2(4)"></button>
+      <button class="dot2" onclick="goToSlide2(5)"></button>
+    </div>
+  </div>
+
+  <!-- ---------------TEAM------------ -->
+  <div class="teamHead">
+    <h2>&lt; Meet Our Team &gt;</h2>
+    <p>The people behind the journey</p>
+  </div>
+  <div class="team">
+    <div class="teamCard">
+      <h3 class="teamName">Aml Medhat</h3>
+      <p class="teamDetails">Frontend Developer</p>
+      <div class="teamSocial">
+        <a href="https://www.linkedin.com/in/aml-elmoslamany-258b72320/" target="_blank"> <i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/aml-medhat" target="_blank"> <i class="fab fa-github"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amlelmoslamany98@gmail.com" target="_blank"><i
+            class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="teamCard">
+      <h3 class="teamName">Aya Mohamed</h3>
+      <p class="teamDetails">Frontend Developer</p>
+      <div class="teamSocial">
+        <a href="https://www.linkedin.com/in/aya-mohammed-2260a8379" target="_blank"> <i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/ayamohammed-arts" target="_blank"> <i class="fab fa-github"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ayamohmmed336633@gmail.com" target="_blank"><i
+            class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="teamCard">
+      <h3 class="teamName">Mohamed Mansour</h3>
+      <p class="teamDetails">Frontend Developer</p>
+      <div class="teamSocial">
+        <a href="https://www.linkedin.com/in/mohamed-mansour27/" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/mohamedmansour277" target="_blank"> <i class="fab fa-github"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mohamedmansour0990@gmail.com" target="_blank"><i
+            class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="teamCard">
+      <h3 class="teamName">Mohamed Hassan</h3>
+      <p class="teamDetails">Frontend Developer</p>
+      <div class="teamSocial">
+        <a href="https://www.linkedin.com/in/mohamed-hassan-273b81298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+          target="_blank"> <i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/MohamedRadwan22" target="_blank"> <i class="fab fa-github"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Mohamedhassan110200@gmail.com" target="_blank"><i
+            class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footerContainerInside">
+      <div class="sherkaFooter">
+        <img src="../mm/imgs/Logo.png" alt="Travelo" />
+        <p>The site offers excellent exclusive deals, and the service felt very personalized. I will definitely book
+          my future trips here.</p>
+      </div>
+      <div class="linksFooter">
+        <div class="sec1">
+          <h4>Useful Links</h4>
+          <a href="../index.html">Home</a>
+          <a href="../amal/about22.html">About</a>
+          <a href="../aya2/Distenation.html">Destination</a>
+          <a href="../amal/about22.html">Book</a>
+        </div>
+        <div class="sec2">
+          <h4>Our Team</h4>
+          <a href="../amal/about22.html">Mohamed Mansour</a>
+          <a href="../amal/about22.html">Amal Medhat</a>
+          <a href="../amal/about22.html">Mohamed Hassan</a>
+          <a href="../amal/about22.html">Aya Mohamed</a>
+        </div>
+        <div class="sec3">
+          <h4>Comunicate</h4>
+          <a href="../mh/index.html">Sign up</a>
+          <a href="../mh/index.html">Login</a>
+          <a href="../book.html">Book</a>
+        </div>
+      </div>
+    </div>
+    <div class="footerEndContainer">
+      <div class="footerEnd">
+        <p>&copy; 2025 | Made with love by <span>&lt;/ Team One &gt;</span></p>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <script src="script (1).js"></script>
+</body>
+
+</html>
